@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "userName": "user1",
+    "title": "Basic Shirt",
+    "price": 199,
+    "pricingOption": 1,
+    "creator": "Brand A",
+    "imagePath": ""
+  },
+  {
+    "id": "2",
+    "userName": "user2",
+    "title": "Free Course",
+    "price": 2,
+    "pricingOption": 1,
+    "creator": "Creator B",
+    "imagePath": ""
+  },
+  {
+    "id": "3",
+    "userName": "user3",
+    "title": "Premium Jacket",
+    "price": 999,
+    "pricingOption": 0,
+    "creator": "Brand C",
+    "imagePath": ""
+  }
+]
