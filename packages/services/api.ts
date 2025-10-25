@@ -9,9 +9,7 @@ export const fetchContents = async (): Promise<ContentItem[]> => {
   }
 
   try {
-    const response = await fetch(
-      "https://closet-recruiting-api.azurewebsites.net/api/data"
-    );
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/data");
     return await response.json();
   } catch (err) {
     console.error("Error fetching contents:", err);

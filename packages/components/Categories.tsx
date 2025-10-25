@@ -24,9 +24,9 @@ const Categories = observer(() => {
         className="flex text-left bg-filter px-8 rounded-md items-center gap-2.5 py-4 font-medium text-gray-900"
       >
         <div className="flex justify-between gap-y-8 flex-wrap w-full gap-4 items-center">
-          <span className="flex text-gray-500 gap-x-6 gap-y-2 text-sm w-full flex-wrap items-center">
+          <span className="flex text-gray-500 gap-x-6 gap-y-2 text-sm w-fit flex-wrap items-center">
             <span className="text-xs">Price Options :</span>
-            <div className="flex gap-6">
+            <div className="flex w-fit gap-6">
               {Object.values(PricingOption)
                 .filter((v) => typeof v === "number")
                 .map((opt) => (

@@ -36,7 +36,7 @@ const PriceSlider = observer(() => {
   };
 
   return (
-    <div className="w-full max-w-64 lg:ml-4 flex items-center gap-x-4">
+    <div className="w-fit lg:ml-4 flex items-center gap-x-4">
       <div className="flex justify-between text-xs text-gray-600">
         <span>${range[0]}</span>
       </div>
@@ -45,6 +45,7 @@ const PriceSlider = observer(() => {
         value={range}
         min={Math.min(...contentStore.contents.map((c) => c.price || 0))}
         max={999}
+        className="w-44"
         onValueChange={handleChange}
       />
       <div className="flex justify-between text-xs text-gray-600">

@@ -5,6 +5,7 @@ import ProductGrid from "../packages/components/ProductGrid";
 import { contentStore } from "@/packages/store";
 import { useSearchParams } from "next/navigation";
 import { observer } from "mobx-react";
+import Head from "next/head";
 
 const Home = observer(() => {
   const searchParams = useSearchParams();
@@ -20,17 +21,26 @@ const Home = observer(() => {
   }, [searchParams]);
 
   return (
-    <div className="container mx-auto min-h-screen">
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6">
-        <div
-          className="grid py-10 gap-y-10"
-          aria-label="Product list and categories"
-        >
-          <Categories aria-label="Product categories" />
-          <ProductGrid aria-label="Product grid" />
-        </div>
-      </main>
-    </div>
+    <>
+      <Head>
+        <title>Virtual Fashion</title>
+        <meta name="description" content="Shop the best products online!" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="ecommerce, products, shop" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="container mx-auto min-h-screen">
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6">
+          <div
+            className="grid py-10 gap-y-10"
+            aria-label="Product list and categories"
+          >
+            <Categories aria-label="Product categories" />
+            <ProductGrid aria-label="Product grid" />
+          </div>
+        </main>
+      </div>
+    </>
   );
 });
 
